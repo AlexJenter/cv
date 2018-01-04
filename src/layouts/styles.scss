@@ -1,0 +1,20 @@
+$max-width: 960px;
+$base-padding: 15px;
+
+@mixin base {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: $base-padding;
+}
+
+.header {
+    @include base;
+    a {
+        color: black;
+        text-decoration: none;
+    }
+}
+
+.body {
+    @include base;
+}
