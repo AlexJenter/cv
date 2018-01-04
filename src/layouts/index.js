@@ -10,7 +10,6 @@ const Header = () => (
   <div className="header">
     <h1>
       <Link to="/">CV</Link>
-      
     </h1>
   </div>
 )
@@ -18,7 +17,7 @@ const Header = () => (
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
-      title="Gatsby Default Starter"
+      title="CV – Alex Jenter"
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
