@@ -4,6 +4,7 @@ import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
 import './index.scss'
+import './styles.scss'
 
 const Header = () => (
   <div className="header">
