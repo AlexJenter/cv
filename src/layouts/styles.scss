@@ -18,3 +18,9 @@ $base-padding: 15px;
 .body {
     @include base;
 }
+
+.skill-item {
+    display: block;
+    list-style: none;
+    
+}

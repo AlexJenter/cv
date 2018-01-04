@@ -1,6 +1,8 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
+import Skill from '../components/Skill'
+
 const Section = ({frontmatter, html}) => (
   <section>
     <h2>{frontmatter.title}</h2>
@@ -20,6 +22,20 @@ const IndexPage = ({data}) => (
       .sort((a, b) => a.node.frontmatter.position - b.node.frontmatter.position)
       .map(x => <Section {...x.node}/>)
     }
+      <section>
+    <h2>Fähigkeiten</h2>
+    <h3>Design</h3>
+    <ul>
+      <Skill score="7" name="Sketch.app"/>
+      <Skill score="8" name="Illustrator"/>
+    </ul>
+    <h3>Code</h3>
+    <ul>
+      <Skill score="8" name="HTML/CSS"/>
+      <Skill score="7" name="Javascript"/>
+      <Skill score="4" name="Bash"/>
+    </ul>
+  </section>
   </main>
 )
 
