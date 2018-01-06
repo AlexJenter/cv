@@ -3,12 +3,11 @@ position: 200
 title: Person
 ---
 
-Alex Jenter
-Anwandstrasse 82
+Alex Jenter  
+Anwandstrasse 82  
 8004 Zürich
 
 [jenteralex@gmail.com](mailto:jenteralex@gmail.com?subject="HAY")
-
 
 |||
 |---|---|
