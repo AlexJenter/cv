@@ -2,7 +2,7 @@ import React from 'react';
 import Skillitem from './Skillitem';
 
 export default () => (
-  <section>
+  <section className="section--skills">
     <h2>Fähigkeiten</h2>
     <h3>Design</h3>
     <ul>
