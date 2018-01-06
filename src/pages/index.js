@@ -15,20 +15,16 @@ const Section = ({frontmatter, html}) => (
 
 const IndexPage = ({data}) => (
   <main>
-    {
-      data
-      .allMarkdownRemark
-      .edges
-      .sort((a, b) => a.node.frontmatter.position - b.node.frontmatter.position)
-      .map(x => <Section {...x.node}/>)
-    }
+    {data.allMarkdownRemark.edges.map(x => <Section {...x.node}/>)}
     <Skillsection />
   </main>
 )
 
 export const query = graphql`
 query IndexQuery {
-  allMarkdownRemark {
+  allMarkdownRemark(
+    sort: {fields: [frontmatter___position], order: ASC }
+  ) {
     edges {
       node {
         frontmatter {
