@@ -6,7 +6,7 @@ import Section from '../components/Section';
 
 const IndexPage = ({data}) => (
   <main>
-    {data.allMarkdownRemark.edges.map(x => <Section {...x.node}/>)}
+    {data.allMarkdownRemark.edges.map(x => <Section key={x.node.id} {...x.node}/>)}
     <Skillsection />
   </main>
 )
@@ -18,6 +18,7 @@ query IndexQuery {
   ) {
     edges {
       node {
+        id
         frontmatter {
           position
           title

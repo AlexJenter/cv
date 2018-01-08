@@ -7,6 +7,8 @@ $base-padding: 15px;
     padding: $base-padding;
 }
 
+
+
 header {
     @include base;
     a {
@@ -20,14 +22,66 @@ main {
 }
 
 .section {
+    h2 {
 
+        margin-top: 4rem;
+    }
+
+    h3 {
+        margin-top: 3rem;
+        > strong {
+            float: right;
+            width: 50%;
+        }
+    }
+
+    ul {
+        margin: 0;
+    }
+    
+    &--beruf {
+        .section__content span {
+            display: flex; 
+            justify-content: space-between;
+            
+            > p {
+                padding-right: $base-padding;
+                flex: 50% 0 0;
+            }
+            > ul {
+                flex: 50% 0 0;
+            }
+        }
+    }
+    
+    &--bildung .section__content p {
+        padding-right: $base-padding;
+        max-width: 50%;
+    }
+
+    &--skills {
+        display: flex;
+        position: relative;
+        margin-top: 6rem;
+        h2 {
+            position: absolute;
+            bottom: 100%;
+        }
+        h3 {
+            margin-top: 0;
+
+        }
+        > div {
+            flex: 50% 0 0;
+        }
+    }
 }
 
 .skill-item {
     display: block;
     list-style: none;
     &__indicator {
-        width: 300px;
+        width: 50%;
         height: 5px;
         background-color: lightgray;
     }
