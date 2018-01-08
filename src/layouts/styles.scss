@@ -1,5 +1,6 @@
 $max-width: 960px;
 $base-padding: 15px;
+$center-gap: 50px;
 
 @mixin base {
     max-width: $max-width;
@@ -11,6 +12,8 @@ $base-padding: 15px;
 
 header {
     @include base;
+    position: relative;
+
     a {
         color: black;
         text-decoration: none;
@@ -21,9 +24,18 @@ main {
     @include base;
 }
 
+.portrait {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    top: 0;
+    height: 100%;
+}
+
+
+
 .section {
     h2 {
-
         margin-top: 4rem;
     }
 
@@ -38,14 +50,22 @@ main {
     ul {
         margin: 0;
     }
+
+    &--person p {
+        width: 50%;
+        padding-right: $center-gap;
+        box-sizing: border-box;
+
+ 
+    }
     
-    &--beruf {
+    &--work {
         .section__content span {
             display: flex; 
             justify-content: space-between;
             
             > p {
-                padding-right: $base-padding;
+                padding-right: $center-gap;
                 flex: 50% 0 0;
             }
             > ul {
@@ -54,26 +74,14 @@ main {
         }
     }
     
-    &--bildung .section__content p {
-        padding-right: $base-padding;
+    &--education .section__content p {
+        padding-right: $center-gap;
         max-width: 50%;
     }
 
     &--skills {
-        display: flex;
-        position: relative;
-        margin-top: 6rem;
-        h2 {
-            position: absolute;
-            bottom: 100%;
-        }
-        h3 {
-            margin-top: 0;
-
-        }
-        > div {
-            flex: 50% 0 0;
-        }
+        padding-right: $center-gap;
+        width: 50%;
     }
 }
 
@@ -81,7 +89,7 @@ main {
     display: block;
     list-style: none;
     &__indicator {
-        width: 50%;
+        width: 100%;
         height: 5px;
         background-color: lightgray;
     }

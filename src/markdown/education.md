@@ -1,9 +1,9 @@
 ---
 position: 400
-title: Bildung
+title: Education
 ---
 
-### SEP '09 – MAI '12 **BA  INDUSTRIALDESIGN ZHDK**
+### SEP '09 – MAY '12 **BA INDUSTRIALDESIGN ZHDK**
 BA of Arts Vertiefungsrichtung Industrial Design an der Zürcher Hochschule der Künste
 
 ### AUG '08 – JUN '09 **TECHNISCHE BMS**

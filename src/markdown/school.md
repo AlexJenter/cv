@@ -1,10 +1,10 @@
 ---
-position: 400
-title: Schule
+position: 500
+title: School
 ---
 
 ### JUN '94 – JUN '97 **SEKUNDARSCHULE**
-Winterthur Seen
+**Winterthur Seen**
 
 ### JUN '88 – JUN '94 **PRIMARSCHULE**
-Winterthur Seen
+**Winterthur Seen**

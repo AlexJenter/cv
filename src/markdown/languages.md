@@ -1,6 +1,6 @@
 ---
 position: 500
-title: Sprachen
+title: Languages
 ---
 
 |||

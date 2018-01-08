@@ -7,15 +7,6 @@ import './index.scss'
 import './styles.scss'
 import './typography.scss'
 
-
-const Header = () => (
-  <header>
-    <h1>
-      <Link to="/">CV</Link>
-    </h1>
-  </header>
-)
-
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
@@ -31,8 +22,6 @@ const TemplateWrapper = ({ children }) => (
         }
       ]}
     />
-
-    <Header />
     {children()}
   </div>
 )

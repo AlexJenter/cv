@@ -3,7 +3,7 @@ import Skillitem from './Skillitem';
 
 export default () => (
   <section className="section section--skills">
-  <h2>Fähigkeiten</h2>
+  <h2>Skills</h2>
     <div>
       <h3>Design</h3>
       <ul>

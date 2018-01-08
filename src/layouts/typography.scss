@@ -19,6 +19,7 @@ h2 {
 
 h3 {
     @include header(300);
+    font-size: 1rem;
 }
 
 b, strong, .section--skills h3 {
@@ -27,4 +28,16 @@ b, strong, .section--skills h3 {
 
 ul {
     list-style: none;
+}
+
+.section {
+    a {
+        color: coral;
+        text-decoration: underline;
+        text-decoration-color: transparent;
+        transition: text-decoration 300ms ease;
+        &:hover {
+            text-decoration-color: coral;
+        }
+    }
 }
