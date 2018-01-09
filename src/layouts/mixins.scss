@@ -1,0 +1,30 @@
+$media-direction: min;
+
+$breakpoints: (
+  'default':            '',
+  'xs':                 480px,
+  's':                  667px,
+  'm':                  1024px,
+  'l':                  1280px,
+  'xl':                 1680px,
+);
+
+@mixin media($breakpoint, $direction: $media-direction) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media screen and (#{$direction}-width: #{map-get($breakpoints, $breakpoint)}) {
+            @content;
+        }
+    }
+    @else if unitless($breakpoint) {
+        $breakpoint: $breakpoint + 0px;
+        @media screen and (#{$direction}-width: $breakpoint) {
+            @content;
+        }
+    }
+}
+
+@mixin base {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: $base-padding;
+}
