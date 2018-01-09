@@ -24,6 +24,14 @@ header {
             font-size: 20vmin;
         }
     }
+
+    p:nth-child(1) {
+        margin-top: 3rem;
+    }
+
+    p:nth-child(2) {
+        margin-bottom: 1rem;
+    }
 }
 
 main {
@@ -53,7 +61,7 @@ main {
         margin-top: 4rem;
         @include media(s, max) {
             &:first-of-type {
-                margin-top: 1rem;
+                margin-top: 0;
             }
         }
     }
