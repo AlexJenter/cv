@@ -72,6 +72,9 @@ main {
     h3 {
         margin-top: 3rem;
         color: lightgray;
+        @include media(s) {
+            color: black;
+        }
         > strong {
             display: block;
             color: black;
