@@ -8,8 +8,6 @@ title: "Work"
 <span>
 
 **Web developer** - Focused on Frontend with the occasional opportunity to play around react or canvas on the job  
-[re-fugium.com](https://www.re-fugium.com/)  
-[georggerster.com](http://www.georggerster.com/)  
 
 - UX
 - Information Architecture

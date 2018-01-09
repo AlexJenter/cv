@@ -2,12 +2,7 @@
 position: 500
 title: Languages
 ---
-
-|||
-|---|---|
-|Deutsch|Muttersprache|
-|English|Konversationssicher|
-|Französisch|Grundkenntnisse|
+Fluent in English and German, conversational skills in french
  
  
  

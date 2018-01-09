@@ -5,7 +5,7 @@ import Skillsection from '../components/Skillsection';
 import FirstSection from '../components/FirstSection';
 import Section from '../components/Section';
 
-import image from '../../img/foto-av.jpg';
+import image from '../../static/foto-av.jpg';
 
 
 const IndexPage = ({data}) => (
