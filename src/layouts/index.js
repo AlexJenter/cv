@@ -17,9 +17,10 @@ const TemplateWrapper = ({ children }) => (
       ]}
       link={[
         {
-          href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700',
-          rel: 'stylesheet'
-        }
+          href:
+            'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700',
+          rel: 'stylesheet',
+        },
       ]}
     />
     {children()}
@@ -31,5 +32,3 @@ TemplateWrapper.propTypes = {
 }
 
 export default TemplateWrapper
-
-
