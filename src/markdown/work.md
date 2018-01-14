@@ -7,7 +7,7 @@ title: "Work"
 
 <span>
 
-**Web developer** - Focused on Frontend with the occasional opportunity to play around react or canvas on the job  
+**Web developer** - Focused on frontend with the occasional opportunity to work with react or canvas on the job.  
 
 - UX
 - Information Architecture
@@ -20,7 +20,7 @@ title: "Work"
 
 <span>
 
-**Scientific Assistant** - Consultant for all things Design at the pd|z Product Development Group Zurich Prof. Mirko Meboldt.
+**Scientific Assistant** - Consulting for all things design at the pd|z Product Development Group Zurich headed by Prof. Dr. Mirko Meboldt.
 - Rapid Manufacturing
 - Video editing
 - 3D Printing
@@ -32,7 +32,7 @@ title: "Work"
 
 <span>
 
-**Head of Design** – Responsible for design of early mockups, 3D printed prototypes and protective shells at the ETH Spin off of Sergei Lupashin.
+**Head of Design** – Responsible for design of early mockups, 3D printed prototypes and protective shells at Sergei Lupashin's ETH spin-off.
 - Design consultancy
 - Marketing
 - UI
@@ -43,7 +43,7 @@ title: "Work"
 
 <span>
 
-**Industrial Designer** – Due to the Knowledge gained during my apprenticeship in carpentry i was responsible for Plans and CAD drawings for Möbel Pfister's furniture collection.
+**Industrial Designer** – Drafting of plans and CAD drawings for Möbel Pfister's furniture collection.
 - 3d visualisation
 - Documentation & Specification
 
@@ -53,7 +53,7 @@ title: "Work"
 
 <span>
 
-**Scientific Assistant** – After gathering some experience in the field of generative design, i was presented with the opportunity to further use tools like Rhino3D and Grasshopper in a professional context.
+**Scientific Assistant** – Technical assistance including usage of tools such as Rhino3D and Grasshopper in a professional context.
 - Design automation
 - Experimental workflow
 
@@ -63,7 +63,7 @@ title: "Work"
 
 <span>
 
-**Project partner** – Given the Opportunity to apply my Ideas of automated design variant generation to a businesscase in the renowned atelier of christophe marchand
+**Project Partner** – Applying my ideas of automated design variant generation to a businesscase in the renowned atelier of Christophe Marchand.
 - Generative / procedural Design
 
 </span>
@@ -72,10 +72,10 @@ title: "Work"
 
 <span>
 
-**Project Lead** – commissioned, after winning a student competition, with the design and execution of the first prize trophy for the ZKB sustainability award for small and medium-sized enterprises
+**Project Lead** – Commissioned, after winning a student competition, with the design and execution of the first prize trophy for the ZKB sustainability award for small and medium-sized enterprises.
 - 3D Print and mold making
 - Molding techniques
-- First own client
+- Direct client contact
 
 </span>
 
@@ -94,7 +94,7 @@ title: "Work"
 
 <span>
 
-**Apprenticeship as a cabinetmaker** – working on small-scale furnniture production and hight quality interiors
+**Apprenticeship as a cabinetmaker** – working on small-scale furniture production and high quality interiors
 - Attention to detail
 - Batch production
 

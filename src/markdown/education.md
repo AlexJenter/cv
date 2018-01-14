@@ -3,8 +3,8 @@ position: 400
 title: Education
 ---
 
-### SEP '09 – MAY '12 **Bachelor of Arts**
-Bachelor of Arts in Product and Industrial Design at, Zurich University of the Arts
+### SEP '09 – MAY '12 **ZHdK**
+**Bachelor of Arts** – in Product and Industrial Design at Zurich University of the Arts
 
 ### AUG '08 – JUN '09 **Vocational school**
 Berufsbildungsschule Winterthur BBW
