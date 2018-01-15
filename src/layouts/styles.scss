@@ -52,7 +52,6 @@ main {
     height: 45vw;
     object-fit: cover;
     object-position: 50% 30%;
-    transform: scaleX(-1);
   
     @include media(s) {
         position: absolute;
