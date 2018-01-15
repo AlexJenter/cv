@@ -6,14 +6,18 @@ import Helmet from 'react-helmet'
 import './index.scss'
 import './styles.scss'
 import './typography.scss'
+import image from '../../static/foto-av.jpg'
 
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
-      title="CV – Alex Jenter"
+      title="Alex Jenter – CV"
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        { name: 'description', content: 'Webdeveloper with a background in product design' },
+        { name: 'keywords', content: 'frontend, developer' },
+        { property: 'og:title', content: 'Alex Jenter – CV' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:image', content: image },
       ]}
       link={[
         {
