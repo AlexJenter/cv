@@ -63,7 +63,7 @@ title: "Work"
 
 <span>
 
-**Project Partner** – Applying my ideas of automated design variant generation to a businesscase in the renowned atelier of Christophe Marchand.
+**Project Partner** – Applying my ideas of automated design variant generation to a business case in the renowned atelier of Christophe Marchand.
 - Generative / procedural Design
 
 </span>
@@ -84,7 +84,7 @@ title: "Work"
 
 <span>
 
-**Industrial Design Intern** – Design and model making for a Gait Trainer, grafic design for the corresponding CTI poster, design and technical solutions for a humanoid robot
+**Industrial Design Intern** – Design and model making for a gait Trainer, graphic design for the corresponding CTI poster, design and technical solutions for a humanoid robot
 - Project work in the field
 - Constructional drawing
 
@@ -94,7 +94,7 @@ title: "Work"
 
 <span>
 
-**Apprenticeship as a cabinetmaker** – working on small-scale furniture production and high quality interiors
+**Apprenticeship as a cabinetmaker** – Working on small-scale furniture production and high quality interiors
 - Attention to detail
 - Batch production
 
