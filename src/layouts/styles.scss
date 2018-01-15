@@ -6,6 +6,12 @@ $center-gap: 50px;
 
 header {
     @include base;
+    @include media(s, max) {
+        padding: 0;
+        .section__content {
+            @include base;
+        }
+    }
     @include media(s) {
         position: relative;
     }
@@ -46,10 +52,11 @@ main {
     height: 45vw;
     object-fit: cover;
     object-position: 50% 30%;
+    transform: scaleX(-1);
   
     @include media(s) {
         position: absolute;
-        left: 50%;
+        left: 60%;
         bottom: 0;
         top: 0;
         height: 100%;
@@ -82,13 +89,16 @@ main {
             @include media(s) {
                 margin-top: 0;
                 float: right;
-                width: 50%;
+                width: 40%;
             }
         }
     }
 
     ul {
         margin: 0;
+        li::before {
+            content: "– ";
+        }
     }
 
     &--person p {
@@ -106,10 +116,10 @@ main {
                 justify-content: space-between;
                 > p {
                     padding-right: $center-gap;
-                    flex: 50% 0 0;
+                    flex: 60% 0 0;
                 }
                 > ul {
-                    flex: 50% 0 0;
+                    flex: 40% 0 0;
                 }
             }
             
