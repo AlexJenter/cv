@@ -10,9 +10,9 @@ title: "Work"
 **Web developer** - Focused on frontend with the occasional opportunity to work with react or canvas on the job.  
 
 - UX
-- Information Architecture
+- Information architecture
 - Concept
-- Working with different clients
+- Working with a variety of clients
 
 </span>
 
@@ -21,7 +21,7 @@ title: "Work"
 <span>
 
 **Scientific Assistant** - Consulting for all things design at the pd|z Product Development Group Zurich headed by Prof. Dr. Mirko Meboldt.
-- Rapid Manufacturing
+- Rapid manufacturing
 - Video editing
 - 3D Printing
 - Web development
@@ -32,7 +32,7 @@ title: "Work"
 
 <span>
 
-**Head of Design** – Responsible for design of early mockups, 3D printed prototypes and protective shells at Sergei Lupashin's ETH spin-off.
+**Head of Design** – Responsible for the design of early mockups, 3D printed prototypes and protective shells at Sergei Lupashin's ETH spin-off.
 - Design consultancy
 - Marketing
 - UI
@@ -45,7 +45,7 @@ title: "Work"
 
 **Industrial Designer** – Drafting of plans and CAD drawings for Möbel Pfister's furniture collection.
 - 3d visualisation
-- Documentation & Specification
+- Documentation & specification
 
 </span>
 
@@ -84,7 +84,7 @@ title: "Work"
 
 <span>
 
-**Industrial Design Intern** – Design and model making for a gait Trainer, graphic design for the corresponding CTI poster, design and technical solutions for a humanoid robot
+**Industrial Design Intern** – Design and model making for a gait trainer, graphic design for the corresponding CTI poster, design and technical solutions for a humanoid robot
 - Project work in the field
 - Constructional drawing
 
@@ -94,7 +94,7 @@ title: "Work"
 
 <span>
 
-**Apprenticeship as a cabinetmaker** – Working on small-scale furniture production and high quality interiors
+**Apprenticeship as a carpenter** – (Eidg. dipl.) Working on small-scale furniture production and high quality interiors
 - Attention to detail
 - Batch production
 

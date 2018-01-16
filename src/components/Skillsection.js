@@ -7,16 +7,18 @@ export default () => (
     <div>
       <h3>Design</h3>
       <ul>
-        <Skillitem score="7" name="Sketch.app" />
-        <Skillitem score="8" name="Adobe CC" />
+        <Skillitem score="8" name="Sketch.app" />
+        <Skillitem score="9" name="Adobe CC" />
       </ul>
     </div>
     <div>
       <h3>Code</h3>
       <ul>
-        <Skillitem score="8" name="HTML/CSS" />
-        <Skillitem score="7" name="Javascript" />
-        <Skillitem score="4" name="Bash" />
+        <Skillitem score="9" name="HTML/CSS" />
+        <Skillitem score="8" name="Javascript" />
+        <Skillitem score="7" name="Twig" />
+        <Skillitem score="5" name="PHP" />
+        <Skillitem score="4" name="Python" />
       </ul>
     </div>
   </section>
