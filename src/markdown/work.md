@@ -1,6 +1,7 @@
 ---
 position: 300
 title: "Work"
+published: true
 ---
 
 ### dez '15 – now **attribute**

@@ -41,7 +41,7 @@ export const query = graphql`
       }
     }
     rest: allMarkdownRemark(
-      filter: { frontmatter: { title: { ne: "Person" } } }
+      filter: { frontmatter: { published: { ne: false } } }
       sort: { fields: [frontmatter___position], order: ASC }
     ) {
       edges {

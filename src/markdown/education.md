@@ -1,6 +1,7 @@
 ---
 position: 400
 title: Education
+published: true
 ---
 
 ### SEP '09 – MAY '12 **ZHdK**

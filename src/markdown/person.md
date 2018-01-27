@@ -1,6 +1,7 @@
 ---
 position: 200
 title: Person
+published: false
 ---
 
 Web developer with a background in &shy;product design

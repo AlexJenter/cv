@@ -1,6 +1,7 @@
 ---
 position: 500
 title: School
+published: false
 ---
 
 ### JUN '94 – JUN '97 **SEKUNDARSCHULE**
