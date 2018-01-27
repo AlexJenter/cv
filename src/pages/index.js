@@ -35,6 +35,10 @@ export const query = graphql`
           frontmatter {
             position
             title
+            links {
+              href
+              text
+            }
           }
           html
         }

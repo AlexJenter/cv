@@ -103,11 +103,19 @@ main {
         }
     }
 
-    &--person p {
-        @include media(s) {
-            width: 50%;
-            padding-right: $center-gap;
-            box-sizing: border-box;
+    &--person {
+        a {
+            display: inline-block;
+            &:first-of-type {
+                margin-right: $center-gap;
+            }
+        }
+        p {
+            @include media(s) {
+                width: 50%;
+                padding-right: $center-gap;
+                box-sizing: border-box;
+            }
         }
     }
     
