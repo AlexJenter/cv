@@ -106,8 +106,14 @@ main {
     &--person {
         a {
             display: inline-block;
+            margin-left: $base-padding;
+            
             &:first-of-type {
                 margin-right: $center-gap;
+            }
+            
+            @include media(s) {
+                margin-left: 0;
             }
         }
         p {
