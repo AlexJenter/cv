@@ -4,11 +4,11 @@ title: "Work"
 published: true
 ---
 
-### dez '15 – now **attribute**
+### dec '15 – now **attribute**
 
 <span>
 
-**Web developer** - Focused on frontend with the occasional opportunity to work with react or canvas on the job.  
+**Web developer** – Focused on frontend with the occasional opportunity to work with react or canvas on the job.  
 
 - UX
 - Information architecture
@@ -17,11 +17,11 @@ published: true
 
 </span>
 
-### dez '14 – dez '15 **eth zurich**
+### dec '14 – dec '15 **eth zurich**
 
 <span>
 
-**Scientific Assistant** - Consulting for all things design at the pd|z Product Development Group Zurich headed by Prof. Dr. Mirko Meboldt.
+**Scientific Assistant** – Consulting for all things design at the pd|z Product Development Group Zurich headed by Prof. Dr. Mirko Meboldt.
 - Rapid manufacturing
 - Video editing
 - 3D Printing
