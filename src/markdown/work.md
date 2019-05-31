@@ -4,7 +4,7 @@ title: "Work"
 published: true
 ---
 
-### aug '18 – now **[hinderlingvolkart](https://www.hinderlingvolkart.com/)**
+### sep '18 – now **[hinderlingvolkart](https://www.hinderlingvolkart.com/)**
 
 <span>
 
