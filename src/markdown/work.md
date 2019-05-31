@@ -8,7 +8,7 @@ published: true
 
 <span>
 
-**Full stack developer** – Building backends and processes in one of leading swiss digital agencies
+**Full stack developer** – Building backends and processes in one of leading swiss digital agencies.  
 
 - Networking
 - Operations
@@ -94,7 +94,7 @@ published: true
 </span>
 
 
-### JUN '11 – AUG '11 **[AWTEC (now QUO)](https://www.quo.ch/en/)**
+### JUN '11 – AUG '11 **[QUO](https://www.quo.ch/en/)**
 
 <span>
 
