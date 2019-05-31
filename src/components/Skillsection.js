@@ -11,7 +11,8 @@ export default () => (
           <Skillitem score="9" name="HTML/CSS" />
           <Skillitem score="8" name="Javascript" />
           <Skillitem score="7" name="Twig" />
-          <Skillitem score="2" name="PHP" />
+          <Skillitem score="7" name="PHP" />
+          <Skillitem score="5" name="Bash" />
           <Skillitem score="3" name="Python" />
         </ul>
       </div>

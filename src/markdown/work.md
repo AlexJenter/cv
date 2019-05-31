@@ -4,7 +4,20 @@ title: "Work"
 published: true
 ---
 
-### dec '15 – now **attribute**
+### aug '18 – now **[hinderlingvolkart](https://www.hinderlingvolkart.com/)**
+
+<span>
+
+**Full stack developer** – Building backends and processes in one of leading swiss digital agencies
+
+- Networking
+- Operations
+- Working in a larger team
+- High profile clients
+
+</span>
+
+### dec '15 – aug '18 **[attribute](https://www.attribute.ch)**
 
 <span>
 
@@ -17,7 +30,7 @@ published: true
 
 </span>
 
-### dec '14 – dec '15 **eth zurich**
+### dec '14 – dec '15 **[eth pdz zurich](http://www.pdz.ethz.ch/)**
 
 <span>
 
@@ -29,7 +42,7 @@ published: true
 
 </span>
 
-### jun '14 – nov '14 **PERSPECTIVE ROBOTICS**
+### jun '14 – nov '14 **[FOTOKITE](https://fotokite.com/)**
 
 <span>
 
@@ -40,7 +53,7 @@ published: true
 
 </span>
 
-### FEB '14 – SEP '14 **THIS WEBER**
+### FEB '14 – SEP '14 **[THIS WEBER](https://www.thisweber.com/)**
 
 <span>
 
@@ -50,7 +63,7 @@ published: true
 
 </span>
 
-### SEP '13 – JAN '14 **ZHDK**
+### SEP '13 – JAN '14 **[ZHDK VID](https://industrialdesign.zhdk.ch/)**
 
 <span>
 
@@ -60,7 +73,7 @@ published: true
 
 </span>
 
-### SEP '12 – MAY '13 **CHRISTOPHE MARCHAND**
+### SEP '12 – MAY '13 **[CHRISTOPHE MARCHAND](http://www.christophemarchand.ch/)**
 
 <span>
 
@@ -69,11 +82,11 @@ published: true
 
 </span>
 
-### MAY '12 – JUN '12 **ZKB**
+### MAY '12 – JUN '12 **[ZKB](https://www.zkb.ch)**
 
 <span>
 
-**Project Lead** – Commissioned, after winning a student competition, with the design and execution of the first prize trophy for the ZKB sustainability award for small and medium-sized enterprises.
+**Project Lead** – Commissioned, after winning a student competition, with the design and execution of the first prize trophy for the [ZKB sustainability award](https://www.zkb.ch/de/uu/sp/umwelt-mobilitaet/umweltschutz/nachhaltigkeitspreis) for small and medium-sized enterprises.
 - 3D Print and mold making
 - Molding techniques
 - Direct client contact
@@ -81,7 +94,7 @@ published: true
 </span>
 
 
-### JUN '11 – AUG '11 **AWTEC**
+### JUN '11 – AUG '11 **[AWTEC (now QUO)](https://www.quo.ch/en/)**
 
 <span>
 
@@ -91,7 +104,7 @@ published: true
 
 </span>
 
-### JUN '11 – AUG '11 **NORBERT LOHRER**
+### JUN '11 – AUG '11 **[NORBERT LOHRER](https://lohrer.ch/)**
 
 <span>
 
