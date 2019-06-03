@@ -104,7 +104,7 @@ published: true
 
 </span>
 
-### JUN '11 – AUG '11 **[NORBERT LOHRER](https://lohrer.ch/)**
+### JUN '99 – AUG '03 **[NORBERT LOHRER](https://lohrer.ch/)**
 
 <span>
 
