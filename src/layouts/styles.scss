@@ -150,8 +150,10 @@ main {
     }
 
     &--skills {
-        width: 60%;
-        padding-right: $center-gap;
+        @include media(s) {
+            width: 60%;
+            padding-right: $center-gap;
+        }
         h2 {
             margin-bottom: 0; 
         }
