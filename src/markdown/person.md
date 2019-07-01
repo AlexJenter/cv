@@ -9,4 +9,4 @@ links:
 published: false
 ---
 
-Web developer with a background in &shy;product design
+Web developer with a background in design
