@@ -8,7 +8,7 @@ published: true
 
 <span>
 
-**Full stack developer** – Building backends and processes in one of leading swiss digital agencies.  
+**Full stack developer** – Building backends and defining processes in one of the leading swiss digital agencies.  
 
 - Networking
 - Operations
