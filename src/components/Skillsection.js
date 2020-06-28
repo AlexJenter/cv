@@ -1,5 +1,5 @@
-import React from 'react'
-import Skillitem from './Skillitem'
+import React from "react";
+import Skillitem from "./Skillitem";
 
 export default () => (
   <section className="section section--skills">
@@ -19,10 +19,10 @@ export default () => (
       <div>
         <h3>Design</h3>
         <ul>
-          <Skillitem score="8" name="Sketch.app" />
           <Skillitem score="9" name="Adobe CC" />
+          <Skillitem score="8" name="Sketch.app" />
         </ul>
       </div>
     </div>
   </section>
-)
+);

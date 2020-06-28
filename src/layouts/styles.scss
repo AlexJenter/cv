@@ -2,179 +2,175 @@ $max-width: 960px;
 $base-padding: 15px;
 $center-gap: 50px;
 
-@import './mixins.scss';
+@import "./mixins.scss";
 
 header {
-    @include base;
+  @include base;
+  @include media(s, max) {
+    padding: 0;
+    .section__content {
+      @include base;
+    }
+  }
+  @include media(s) {
+    position: relative;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  h1 a {
     @include media(s, max) {
-        padding: 0;
-        .section__content {
-            @include base;
-        }
+      position: absolute;
+      color: white;
+      padding-left: $base-padding;
+      font-size: 20vw;
+      font-size: 20vmin;
     }
+  }
+
+  p:nth-child(1) {
     @include media(s) {
-        position: relative;
+      margin-top: 3rem;
     }
+  }
 
-    a {
-        color: black;
-        text-decoration: none;
-        display: inline-block;
-    }
-
-    h1 a {
-        @include media(s, max) {
-            position: absolute;
-            color: white;
-            padding-left: $base-padding;
-            font-size: 20vw;
-            font-size: 20vmin;
-        }
-    }
-
-    p:nth-child(1) {
-        @include media(s) {
-            margin-top: 3rem;
-        }
-    }
-
-    p:nth-child(2) {
-        margin-bottom: 1rem;
-    }
+  p:nth-child(2) {
+    margin-bottom: 1rem;
+  }
 }
 
 main {
-    @include base;
+  @include base;
+  margin-bottom: calc(0.5 * (100vw - 960px));
 }
 
 .portrait {
-    width: 100%;
-    height: 45vw;
-    object-fit: cover;
-    object-position: 50% 30%;
-  
-    @include media(s) {
-        position: absolute;
-        left: 60%;
-        bottom: 0;
-        top: 0;
-        height: 100%;
-        width: auto;
-    }
+  width: 100%;
+  height: 45vw;
+  object-fit: cover;
+  object-position: 50% 30%;
+
+  @include media(s) {
+    position: absolute;
+    left: 60%;
+    bottom: 0;
+    top: 0;
+    height: 100%;
+    width: auto;
+  }
 }
 
-
-
 .section {
-    margin-top: 4rem;
+  margin-top: 4rem;
+  h2 {
+    @include media(s, max) {
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+  }
+
+  h3 {
+    margin-top: 3rem;
+    color: #737373;
+    @include media(s) {
+      color: black;
+    }
+    > strong {
+      display: block;
+      color: black;
+      margin-top: 0.3rem;
+      @include media(s) {
+        margin-top: 0;
+        float: right;
+        width: 40%;
+      }
+    }
+  }
+
+  ul {
+    margin: 0;
+    li::before {
+      content: "– ";
+    }
+    .skill-item::before {
+      content: unset;
+    }
+  }
+
+  &--person {
+    a {
+      display: inline-block;
+      margin-left: $base-padding;
+
+      &:first-of-type {
+        margin-right: $center-gap;
+      }
+
+      @include media(s) {
+        margin-left: 0;
+      }
+    }
+    p {
+      @include media(s) {
+        width: 50%;
+        padding-right: $center-gap;
+        box-sizing: border-box;
+      }
+    }
+  }
+
+  &--work {
+    .section__content span {
+      @include media(s) {
+        display: flex;
+        justify-content: space-between;
+        > p {
+          padding-right: $center-gap;
+          flex: 60% 0 0;
+        }
+        > ul {
+          flex: 40% 0 0;
+        }
+      }
+    }
+  }
+
+  &--education .section__content p {
+    @include media(s) {
+      padding-right: $center-gap;
+      max-width: 50%;
+    }
+  }
+
+  &--skills {
+    @include media(s) {
+      width: 60%;
+      padding-right: $center-gap;
+    }
     h2 {
-        @include media(s, max) {
-            &:first-of-type {
-                margin-top: 0;
-            }
-        }
+      margin-bottom: 0;
     }
-
     h3 {
-        margin-top: 3rem;
-        color: #737373;
-        @include media(s) {
-            color: black;
-        }
-        > strong {
-            display: block;
-            color: black;
-            margin-top: 0.3rem;
-            @include media(s) {
-                margin-top: 0;
-                float: right;
-                width: 40%;
-            }
-        }
+      color: black;
     }
-
-    ul {
-        margin: 0;
-        li::before {
-            content: "– ";
-        }
-        .skill-item::before {
-            content: unset;
-        }
-    }
-
-    &--person {
-        a {
-            display: inline-block;
-            margin-left: $base-padding;
-            
-            &:first-of-type {
-                margin-right: $center-gap;
-            }
-            
-            @include media(s) {
-                margin-left: 0;
-            }
-        }
-        p {
-            @include media(s) {
-                width: 50%;
-                padding-right: $center-gap;
-                box-sizing: border-box;
-            }
-        }
-    }
-    
-    &--work {
-        .section__content span {
-            @include media(s) {
-                display: flex; 
-                justify-content: space-between;
-                > p {
-                    padding-right: $center-gap;
-                    flex: 60% 0 0;
-                }
-                > ul {
-                    flex: 40% 0 0;
-                }
-            }
-            
-        }
-    }
-    
-    &--education .section__content p {
-        @include media(s) {
-            padding-right: $center-gap;
-            max-width: 50%;
-        }
-    }
-
-    &--skills {
-        @include media(s) {
-            width: 60%;
-            padding-right: $center-gap;
-        }
-        h2 {
-            margin-bottom: 0; 
-        }
-        h3 {
-            color: black;
-        }
-
-
-    }
+  }
 }
 
 .skill-item {
-    display: block;
-    list-style: none;
-    &__indicator {
-        width: 100%;
-        height: 5px;
-        background-color: lightgray;
-    }
-    &__level {
-        height: 100%;
-        background-color: coral;
-    }
+  display: block;
+  list-style: none;
+  &__indicator {
+    width: 100%;
+    height: 5px;
+    background-color: lightgray;
+  }
+  &__level {
+    height: 100%;
+    background-color: coral;
+  }
 }
