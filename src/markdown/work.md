@@ -8,9 +8,9 @@ published: true
 
 <span>
 
-**Full stack developer** – Building backends and defining processes in one of the leading swiss digital agencies.  
+**Full stack developer** – Building backends and defining processes in one of the leading swiss digital agencies.
 
-- Networking
+- Infrastructure
 - Operations
 - Working in a larger team
 - High profile clients
@@ -21,7 +21,7 @@ published: true
 
 <span>
 
-**Web developer** – Focused on frontend with the occasional opportunity to work with react or canvas on the job.  
+**Web developer** – Focused on frontend with the occasional opportunity to work with react or canvas on the job.
 
 - UX
 - Information architecture
@@ -35,6 +35,7 @@ published: true
 <span>
 
 **Scientific Assistant** – Consulting for all things design at the pd|z Product Development Group Zurich headed by Prof. Dr. Mirko Meboldt.
+
 - Rapid manufacturing
 - Video editing
 - 3D Printing
@@ -47,6 +48,7 @@ published: true
 <span>
 
 **Head of Design** – Responsible for the design of early mockups, 3D printed prototypes and protective shells at Sergei Lupashin's ETH spin-off.
+
 - Design consultancy
 - Marketing
 - UI
@@ -58,6 +60,7 @@ published: true
 <span>
 
 **Industrial Designer** – Drafting of plans and CAD drawings for Möbel Pfister's furniture collection.
+
 - 3d visualisation
 - Documentation & specification
 
@@ -68,6 +71,7 @@ published: true
 <span>
 
 **Scientific Assistant** – Technical assistance including usage of tools such as Rhino3D and Grasshopper in a professional context.
+
 - Design automation
 - Experimental workflow
 
@@ -78,6 +82,7 @@ published: true
 <span>
 
 **Project Partner** – Applying my ideas of automated design variant generation to a business case in the renowned atelier of Christophe Marchand.
+
 - Generative / procedural Design
 
 </span>
@@ -87,18 +92,19 @@ published: true
 <span>
 
 **Project Lead** – Commissioned, after winning a student competition, with the design and execution of the first prize trophy for the [ZKB sustainability award](https://www.zkb.ch/de/uu/sp/umwelt-mobilitaet/umweltschutz/nachhaltigkeitspreis) for small and medium-sized enterprises.
+
 - 3D Print and mold making
 - Molding techniques
 - Direct client contact
 
 </span>
 
-
 ### JUN '11 – AUG '11 **[QUO](https://www.quo.ch/en/)**
 
 <span>
 
 **Industrial Design Intern** – Design and model making for a gait trainer, graphic design for the corresponding CTI poster, design and technical solutions for a humanoid robot
+
 - Project work in the field
 - Constructional drawing
 
@@ -109,6 +115,7 @@ published: true
 <span>
 
 **Apprenticeship as a carpenter** – (Eidg. dipl.) Working on small-scale furniture production and high quality interiors
+
 - Attention to detail
 - Batch production
 
