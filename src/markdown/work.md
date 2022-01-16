@@ -4,7 +4,20 @@ title: "Work"
 published: true
 ---
 
-### sep '18 – now **[hinderlingvolkart](https://www.hinderlingvolkart.com/)**
+### apr '21 – now **[kunstbetrieb](https://www.kunstbetrieb.ch/)**
+
+<span>
+
+**Technical Lead / Digital Artist** – Using my in background design combined with my passion for tech to help artists create innovative experiences.
+
+- 3D Data aquirement, processing and modelling
+- CAD, simulations and dynamics
+- Generative / procedural design
+- Consulting on matters of production
+
+</span>
+
+### sep '18 – feb '21 **[hinderlingvolkart](https://www.hinderlingvolkart.com/)**
 
 <span>
 
@@ -83,7 +96,7 @@ published: true
 
 **Project Partner** – Applying my ideas of automated design variant generation to a business case in the renowned atelier of Christophe Marchand.
 
-- Generative / procedural Design
+- Generative / procedural design
 
 </span>
 
