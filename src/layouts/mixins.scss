@@ -11,13 +11,13 @@ $breakpoints: (
 
 @mixin media($breakpoint, $direction: $media-direction) {
     @if map-has-key($breakpoints, $breakpoint) {
-        @media screen and (#{$direction}-width: #{map-get($breakpoints, $breakpoint)}) {
+        @media all and (#{$direction}-width: #{map-get($breakpoints, $breakpoint)}) {
             @content;
         }
     }
     @else if unitless($breakpoint) {
         $breakpoint: $breakpoint + 0px;
-        @media screen and (#{$direction}-width: $breakpoint) {
+        @media all and (#{$direction}-width: $breakpoint) {
             @content;
         }
     }

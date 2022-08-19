@@ -14,11 +14,11 @@ const IndexPage = ({ data }) => (
         <Link to="/">Alex Jenter</Link>
       </h1>
       <img className="portrait" src={image} alt="portrait of alex jenter" />
-      {data.first.edges.map(x => <FirstSection key={x.node.id} {...x.node} />)}
+      {data.person.edges.map(x => <FirstSection key={x.node.id} {...x.node} />)}
     </header>
 
     <main>
-      {data.rest.edges.map(x => <Section key={x.node.id} {...x.node} />)}
+      {data.cv_sections.edges.map(x => <Section key={x.node.id} {...x.node} />)}
       <Skillsection />
     </main>
   </article>
@@ -26,7 +26,7 @@ const IndexPage = ({ data }) => (
 
 export const query = graphql`
   query IndexQuery {
-    first: allMarkdownRemark(
+    person: allMarkdownRemark(
       filter: { frontmatter: { title: { eq: "Person" } } }
     ) {
       edges {
@@ -44,7 +44,7 @@ export const query = graphql`
         }
       }
     }
-    rest: allMarkdownRemark(
+    cv_sections: allMarkdownRemark(
       filter: { frontmatter: { published: { ne: false } } }
       sort: { fields: [frontmatter___position], order: ASC }
     ) {

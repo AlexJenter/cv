@@ -48,6 +48,10 @@ main {
   margin-bottom: calc(0.5 * (100vw - 960px));
 }
 
+ul li:before {
+  content: "\2014 ";
+}
+
 .portrait {
   width: 100%;
   height: 45vw;
@@ -106,9 +110,10 @@ main {
     a {
       display: inline-block;
       margin-left: $base-padding;
+      margin-right: $center-gap;
 
-      &:first-of-type {
-        margin-right: $center-gap;
+      &:last-of-type {
+        margin-right: 0;
       }
 
       @include media(s) {

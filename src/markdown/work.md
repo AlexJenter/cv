@@ -8,7 +8,7 @@ published: true
 
 <span>
 
-**Technical Lead / Digital Artist** – Using my in background design combined with my passion for tech to help artists create innovative experiences.
+**Technical Lead / Digital Artist** – Using my background in design and my passion for tech to help artists create innovative experiences.
 
 - 3D Data aquirement, processing and modelling
 - CAD, simulations and dynamics
