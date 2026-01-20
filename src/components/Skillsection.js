@@ -1,5 +1,5 @@
-import React from "react";
-import Skillitem from "./Skillitem";
+import React from 'react'
+import Skillitem from './Skillitem'
 
 export default () => (
   <section className="section section--skills">
@@ -25,4 +25,4 @@ export default () => (
       </div>
     </div>
   </section>
-);
+)

@@ -13,7 +13,10 @@ const TemplateWrapper = ({ children }) => (
     <Helmet
       title="Alex Jenter – CV"
       meta={[
-        { name: 'description', content: 'Webdeveloper with a background in product design' },
+        {
+          name: 'description',
+          content: 'Webdeveloper with a background in product design',
+        },
         { name: 'keywords', content: 'frontend, developer' },
         { property: 'og:title', content: 'Alex Jenter – CV' },
         { property: 'og:type', content: 'website' },

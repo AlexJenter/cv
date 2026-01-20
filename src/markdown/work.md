@@ -4,13 +4,26 @@ title: "Work"
 published: true
 ---
 
-### apr '21 – now **[kunstbetrieb](https://www.kunstbetrieb.ch/)**
+### jun '24 – now **[Upset Studio](https://upset.ch/)**
+
+<span>
+
+**Web Developer / Creative Coder** – Bridging the gap between Swiss graphic design heritage and modern interactive technology.
+
+- Interactive 3D via **React Three Fiber**
+- Custom **Canvas-based** creative tools
+- Technical implementation of design systems
+- Consulting on digital production & feasibility
+
+</span>
+
+### apr '21 – jun '24 **[kunstbetrieb](https://www.kunstbetrieb.ch/)**
 
 <span>
 
 **Technical Lead / Digital Artist** – Using my background in design and my passion for tech to help artists create innovative experiences.
 
-- 3D Data aquirement, processing and modelling
+- 3D Data acquisition, processing and modelling
 - CAD, simulations and dynamics
 - Generative / procedural design
 - Consulting on matters of production
@@ -21,11 +34,11 @@ published: true
 
 <span>
 
-**Full stack developer** – Building backends and defining processes in one of the leading swiss digital agencies.
+**Full stack developer** – Building backends and defining processes in one of the leading Swiss digital agencies.
 
 - Infrastructure
 - Operations
-- Working in a larger team
+- Collaborating within cross-functional teams
 - High profile clients
 
 </span>
@@ -34,12 +47,12 @@ published: true
 
 <span>
 
-**Web developer** – Focused on frontend with the occasional opportunity to work with react or canvas on the job.
+**Web Developer** – Focused on frontend architecture with specialized work in React and Canvas.
 
-- UX
-- Information architecture
-- Concept
-- Working with a variety of clients
+- UX & Information architecture
+- Interactive prototype development
+- UI Concept & execution
+- Multi-sector client portfolio
 
 </span>
 
@@ -47,12 +60,12 @@ published: true
 
 <span>
 
-**Scientific Assistant** – Consulting for all things design at the pd|z Product Development Group Zurich headed by Prof. Dr. Mirko Meboldt.
+**Scientific Assistant** – Design lead and technical consultant for the pd|z Product Development Group Zurich.
 
-- Rapid manufacturing
-- Video editing
-- 3D Printing
+- Rapid manufacturing & 3D Printing
+- Digital workflow optimization
 - Web development
+- Video production & editing
 
 </span>
 
@@ -74,7 +87,7 @@ published: true
 
 **Industrial Designer** – Drafting of plans and CAD drawings for Möbel Pfister's furniture collection.
 
-- 3d visualisation
+- 3D visualisation
 - Documentation & specification
 
 </span>

@@ -14,11 +14,15 @@ const IndexPage = ({ data }) => (
         <Link to="/">Alex Jenter</Link>
       </h1>
       <img className="portrait" src={image} alt="portrait of alex jenter" />
-      {data.person.edges.map(x => <FirstSection key={x.node.id} {...x.node} />)}
+      {data.person.edges.map(x => (
+        <FirstSection key={x.node.id} {...x.node} />
+      ))}
     </header>
 
     <main>
-      {data.cv_sections.edges.map(x => <Section key={x.node.id} {...x.node} />)}
+      {data.cv_sections.edges.map(x => (
+        <Section key={x.node.id} {...x.node} />
+      ))}
       <Skillsection />
     </main>
   </article>
