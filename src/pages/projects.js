@@ -27,6 +27,8 @@ const idleCallback =
     ? cb => window.requestIdleCallback(cb)
     : cb => setTimeout(cb, 100);
 
+const LERP = 0.1;
+
 class ProjectsPage extends React.Component {
   constructor(props) {
     super(props);
@@ -35,7 +37,11 @@ class ProjectsPage extends React.Component {
       hoveredUrl: null,
       tooltipPos: { x: 0, y: 0 }
     };
+    this.targetPos = { x: 0, y: 0 };
+    this.easedPos = { x: 0, y: 0 };
+    this.rafId = null;
     this.handleMouseMove = this.handleMouseMove.bind(this);
+    this.animateTooltip = this.animateTooltip.bind(this);
   }
 
   componentDidMount() {
@@ -62,9 +68,32 @@ class ProjectsPage extends React.Component {
     });
   }
 
+  componentWillUnmount() {
+    if (this.rafId) cancelAnimationFrame(this.rafId);
+  }
+
+  animateTooltip() {
+    this.easedPos = {
+      x: this.easedPos.x + (this.targetPos.x - this.easedPos.x) * LERP,
+      y: this.easedPos.y + (this.targetPos.y - this.easedPos.y) * LERP
+    };
+
+    this.setState({ tooltipPos: { ...this.easedPos } });
+
+    const dx = Math.abs(this.targetPos.x - this.easedPos.x);
+    const dy = Math.abs(this.targetPos.y - this.easedPos.y);
+
+    if (dx > 0.1 || dy > 0.1) {
+      this.rafId = requestAnimationFrame(this.animateTooltip);
+    } else {
+      this.rafId = null;
+    }
+  }
+
   handleMouseMove(e) {
-    if (this.state.hoveredUrl) {
-      this.setState({ tooltipPos: { x: e.clientX, y: e.clientY } });
+    this.targetPos = { x: e.clientX + 20, y: e.clientY + 20 };
+    if (this.state.hoveredUrl && !this.rafId) {
+      this.rafId = requestAnimationFrame(this.animateTooltip);
     }
   }
 
@@ -89,18 +118,26 @@ class ProjectsPage extends React.Component {
           <h2>Recent Projects</h2>
           <ul>
             {links.map(({ url, label }) => (
-              <li key={url}>
+              <li key={url} className="recent-work-item">
                 <a
+                  className="recent-work-link"
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onMouseEnter={e =>
-                    this.setState({
-                      hoveredUrl: url,
-                      tooltipPos: { x: e.clientX, y: e.clientY }
-                    })
-                  }
-                  onMouseLeave={() => this.setState({ hoveredUrl: null })}
+                  onMouseEnter={e => {
+                    const x = e.clientX + 20;
+                    const y = e.clientY + 20;
+                    this.targetPos = { x, y };
+                    this.easedPos = { x, y };
+                    this.setState({ hoveredUrl: url, tooltipPos: { x, y } });
+                  }}
+                  onMouseLeave={() => {
+                    if (this.rafId) {
+                      cancelAnimationFrame(this.rafId);
+                      this.rafId = null;
+                    }
+                    this.setState({ hoveredUrl: null });
+                  }}
                 >
                   {label}
                 </a>
@@ -112,7 +149,7 @@ class ProjectsPage extends React.Component {
         {screenshotUrl && (
           <div
             className="preview-tooltip"
-            style={{ left: tooltipPos.x + 20, top: tooltipPos.y + 20 }}
+            style={{ left: tooltipPos.x, top: tooltipPos.y }}
           >
             <img src={screenshotUrl} alt="" />
           </div>

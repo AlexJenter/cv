@@ -170,6 +170,7 @@ ul li:before {
   position: fixed;
   pointer-events: none;
   z-index: 1000;
+  width: 640px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
 
   img {
@@ -192,4 +193,32 @@ ul li:before {
     height: 100%;
     background-color: coral;
   }
+}
+
+.recent-work-item {
+  position: relative;
+
+  &::before {
+    content: "";
+    background-color: black;
+    height: 2px;
+    width: 1em;
+    top: calc(50% - 1px);
+
+    position: absolute;
+    right: calc(100% + 0.5em);
+    transition: transform 150ms ease-out;
+    transform-origin: left;
+  }
+  &:hover::before {
+    transform: scaleX(1000%);
+  }
+}
+.recent-work-link {
+  color: black;
+  text-decoration: none;
+
+  width: strech;
+  width: 100%;
+  display: inline-block;
 }
