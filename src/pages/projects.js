@@ -28,6 +28,7 @@ const idleCallback =
     : cb => setTimeout(cb, 100);
 
 const LERP = 0.1;
+const FADE_MS = 250;
 
 class ProjectsPage extends React.Component {
   constructor(props) {
@@ -35,11 +36,14 @@ class ProjectsPage extends React.Component {
     this.state = {
       screenshots: {},
       hoveredUrl: null,
+      displayUrl: null,
+      prevUrl: null,
       tooltipPos: { x: 0, y: 0 }
     };
     this.targetPos = { x: 0, y: 0 };
     this.easedPos = { x: 0, y: 0 };
     this.rafId = null;
+    this.fadeTimer = null;
     this.handleMouseMove = this.handleMouseMove.bind(this);
     this.animateTooltip = this.animateTooltip.bind(this);
   }
@@ -55,12 +59,17 @@ class ProjectsPage extends React.Component {
           .then(res => res.json())
           .then(data => {
             if (data.status === "success" && data.data.screenshot) {
-              this.setState(prev => ({
-                screenshots: {
-                  ...prev.screenshots,
-                  [url]: data.data.screenshot.url
+              this.setState(
+                prev => ({
+                  screenshots: {
+                    ...prev.screenshots,
+                    [url]: data.data.screenshot.url
+                  }
+                }),
+                () => {
+                  if (this.state.hoveredUrl === url) this.showScreenshot(url);
                 }
-              }));
+              );
             }
           })
           .catch(() => {});
@@ -70,6 +79,29 @@ class ProjectsPage extends React.Component {
 
   componentWillUnmount() {
     if (this.rafId) cancelAnimationFrame(this.rafId);
+    if (this.fadeTimer) clearTimeout(this.fadeTimer);
+  }
+
+  showScreenshot(url) {
+    const { displayUrl, screenshots } = this.state;
+    if (!screenshots[url] || url === displayUrl) return;
+    clearTimeout(this.fadeTimer);
+    this.setState({ displayUrl: url, prevUrl: displayUrl });
+    this.fadeTimer = setTimeout(
+      () => this.setState({ prevUrl: null }),
+      FADE_MS
+    );
+  }
+
+  hideScreenshot() {
+    const { displayUrl } = this.state;
+    if (!displayUrl) return;
+    clearTimeout(this.fadeTimer);
+    this.setState({ displayUrl: null, prevUrl: displayUrl });
+    this.fadeTimer = setTimeout(
+      () => this.setState({ prevUrl: null }),
+      FADE_MS
+    );
   }
 
   animateTooltip() {
@@ -99,8 +131,7 @@ class ProjectsPage extends React.Component {
 
   render() {
     const { data } = this.props;
-    const { screenshots, hoveredUrl, tooltipPos } = this.state;
-    const screenshotUrl = hoveredUrl && screenshots[hoveredUrl];
+    const { screenshots, displayUrl, prevUrl, tooltipPos } = this.state;
 
     return (
       <article onMouseMove={this.handleMouseMove}>
@@ -130,6 +161,7 @@ class ProjectsPage extends React.Component {
                     this.targetPos = { x, y };
                     this.easedPos = { x, y };
                     this.setState({ hoveredUrl: url, tooltipPos: { x, y } });
+                    this.showScreenshot(url);
                   }}
                   onMouseLeave={() => {
                     if (this.rafId) {
@@ -137,6 +169,7 @@ class ProjectsPage extends React.Component {
                       this.rafId = null;
                     }
                     this.setState({ hoveredUrl: null });
+                    this.hideScreenshot();
                   }}
                 >
                   {label}
@@ -146,12 +179,27 @@ class ProjectsPage extends React.Component {
           </ul>
         </main>
 
-        {screenshotUrl && (
+        {(displayUrl || prevUrl) && (
           <div
             className="preview-tooltip"
             style={{ left: tooltipPos.x, top: tooltipPos.y }}
           >
-            <img src={screenshotUrl} alt="" />
+            {prevUrl && (
+              <img
+                key={prevUrl}
+                src={screenshots[prevUrl]}
+                className="preview-tooltip__layer preview-tooltip__layer--out"
+                alt=""
+              />
+            )}
+            {displayUrl && (
+              <img
+                key={displayUrl}
+                src={screenshots[displayUrl]}
+                className="preview-tooltip__layer preview-tooltip__layer--in"
+                alt=""
+              />
+            )}
           </div>
         )}
       </article>

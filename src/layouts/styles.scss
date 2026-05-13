@@ -166,6 +166,26 @@ ul li:before {
   }
 }
 
+$tooltip-fade: 250ms;
+
+@keyframes tooltipFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes tooltipFadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 .preview-tooltip {
   position: fixed;
   pointer-events: none;
@@ -173,11 +193,21 @@ ul li:before {
   width: 640px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
 
-  img {
+  &__layer {
     display: block;
-    width: 640px;
+    width: 100%;
     height: auto;
     margin-bottom: 0;
+
+    &--in {
+      animation: tooltipFadeIn $tooltip-fade forwards;
+    }
+    &--out {
+      position: absolute;
+      top: 0;
+      left: 0;
+      animation: tooltipFadeOut $tooltip-fade forwards;
+    }
   }
 }
 
@@ -200,15 +230,15 @@ ul li:before {
 
   &::before {
     content: "";
-    background-color: black;
+    position: absolute;
     height: 2px;
     width: 1em;
     top: calc(50% - 1px);
-
-    position: absolute;
     right: calc(100% + 0.5em);
     transition: transform 150ms ease-out;
     transform-origin: left;
+    background-color: black;
+    pointer-events: none;
   }
   &:hover::before {
     transform: scaleX(1000%);
