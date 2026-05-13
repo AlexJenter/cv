@@ -4,28 +4,7 @@ import Link from "gatsby-link";
 import FirstSection from "../components/FirstSection";
 
 import image from "../../static/foto-av.jpg";
-
-const links = [
-  {
-    url: "https://zentrumfuerliterarischegegenwart.ch",
-    label: "Zentrum für Literarische Gegenwart"
-  },
-  { url: "https://zurichaestheticslab.ch", label: "Zurich Aesthetics Lab" },
-  { url: "https://lisachrist.ch", label: "Lisa Christ" },
-  {
-    url: "https://www.helvetialuzern.ch/en",
-    label: "Restaurant Helvetia Luzern"
-  },
-  { url: "https://emmeneggerarch.ch/", label: "Emmenegger Architekten" },
-  { url: "https://kiff.ch", label: "Kiff" },
-  { url: "https://upset.ch", label: "Upset" },
-  { url: "https://versive.cc", label: "Versive" }
-];
-
-const idleCallback =
-  typeof window !== "undefined" && window.requestIdleCallback
-    ? cb => window.requestIdleCallback(cb)
-    : cb => setTimeout(cb, 100);
+import links from "../data/projects";
 
 const LERP = 0.1;
 const FADE_MS = 250;
@@ -34,7 +13,6 @@ class ProjectsPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      screenshots: {},
       hoveredUrl: null,
       displayUrl: null,
       prevUrl: null,
@@ -48,42 +26,14 @@ class ProjectsPage extends React.Component {
     this.animateTooltip = this.animateTooltip.bind(this);
   }
 
-  componentDidMount() {
-    links.forEach(({ url }) => {
-      idleCallback(() => {
-        fetch(
-          `https://api.microlink.io/?url=${encodeURIComponent(
-            url
-          )}&screenshot=true&meta=false`
-        )
-          .then(res => res.json())
-          .then(data => {
-            if (data.status === "success" && data.data.screenshot) {
-              this.setState(
-                prev => ({
-                  screenshots: {
-                    ...prev.screenshots,
-                    [url]: data.data.screenshot.url
-                  }
-                }),
-                () => {
-                  if (this.state.hoveredUrl === url) this.showScreenshot(url);
-                }
-              );
-            }
-          })
-          .catch(() => {});
-      });
-    });
-  }
-
   componentWillUnmount() {
     if (this.rafId) cancelAnimationFrame(this.rafId);
     if (this.fadeTimer) clearTimeout(this.fadeTimer);
   }
 
   showScreenshot(url) {
-    const { displayUrl, screenshots } = this.state;
+    const { displayUrl } = this.state;
+    const { screenshots } = this.props.pathContext;
     if (!screenshots[url] || url === displayUrl) return;
     clearTimeout(this.fadeTimer);
     this.setState({ displayUrl: url, prevUrl: displayUrl });
@@ -130,8 +80,9 @@ class ProjectsPage extends React.Component {
   }
 
   render() {
-    const { data } = this.props;
-    const { screenshots, displayUrl, prevUrl, tooltipPos } = this.state;
+    const { data, pathContext } = this.props;
+    const { screenshots } = pathContext;
+    const { displayUrl, prevUrl, tooltipPos } = this.state;
 
     return (
       <article onMouseMove={this.handleMouseMove}>
