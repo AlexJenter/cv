@@ -82,7 +82,7 @@ class ProjectsPage extends React.Component {
   render() {
     const { data } = this.props;
     const { displayUrl, prevUrl, tooltipPos } = this.state;
-    this.screenshots = data.screenshots.edges.reduce((acc, { node }) => {
+    this.screenshots = (data.screenshots ? data.screenshots.edges : []).reduce((acc, { node }) => {
       if (node.screenshotUrl) acc[node.projectUrl] = node.screenshotUrl;
       return acc;
     }, {});
@@ -276,15 +276,16 @@ export const query = graphql`
         }
       }
     }
-    screenshots: allProjectScreenshot {
-      edges {
-        node {
-          projectUrl
-          screenshotUrl
-        }
-      }
-    }
   }
 `;
 
 export default ProjectsPage;
+
+// screenshots: allProjectScreenshot {
+//   edges {
+//     node {
+//       projectUrl
+//       screenshotUrl
+//     }
+//   }
+// }

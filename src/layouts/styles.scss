@@ -254,8 +254,7 @@ $tooltip-fade: 250ms;
   width: strech;
   width: 100%;
   display: inline-block;
-  transition: color 100ms ease-out, text-decoration-color 100ms ease-out,
-    text-decoration-thickness 100ms ease-out;
+  transition: color 100ms ease-out, text-decoration-color 100ms ease-out;
 
   &:hover {
     color: coral;
