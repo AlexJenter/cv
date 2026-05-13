@@ -29,7 +29,7 @@ export default class Firstsection extends React.Component {
             </a>
           ) : null
         )}
-        {this.props.page === "cv" && <Link to="/projects/">Recent Projects</Link>}
+        {this.props.page === "cv" && <Link to="/projects/">Recent</Link>}
         {this.props.page === "projects" && <Link to="/">CV</Link>}
       </section>
     );

@@ -1,30 +1,41 @@
 const fetch = require("node-fetch");
+const crypto = require("crypto");
 const links = require("./src/data/projects");
 
-exports.onCreatePage = async ({ page, boundActionCreators }) => {
-  const { createPage, deletePage } = boundActionCreators;
+exports.sourceNodes = async ({ boundActionCreators }) => {
+  const { createNode } = boundActionCreators;
 
-  if (page.path !== "/projects/") return;
-
-  const screenshots = {};
   await Promise.all(
-    links.map(async ({ url, delay = 0 }) => {
+    links.map(async ({ url }) => {
+      let screenshotUrl = "";
       try {
         const res = await fetch(
-          `https://api.microlink.io/?url=${encodeURIComponent(
-            url
-          )}&screenshot=true${
-            delay ? `&waitForTimeout=${delay}` : ""
-          }&force=true&meta=false`
+          `https://api.microlink.io/?url=${encodeURIComponent(url)}&screenshot=true&meta=false`
         );
         const data = await res.json();
         if (data.status === "success" && data.data.screenshot) {
-          screenshots[url] = data.data.screenshot.url;
+          screenshotUrl = data.data.screenshot.url;
+        } else {
+          console.log(`[screenshots] no screenshot for ${url}:`, JSON.stringify(data));
         }
-      } catch (e) {}
+      } catch (e) {
+        console.log(`[screenshots] fetch error for ${url}:`, e.message);
+      }
+
+      createNode({
+        id: `ProjectScreenshot-${url}`,
+        parent: null,
+        children: [],
+        internal: {
+          type: "ProjectScreenshot",
+          contentDigest: crypto
+            .createHash("md5")
+            .update(screenshotUrl || url)
+            .digest("hex")
+        },
+        projectUrl: url,
+        screenshotUrl
+      });
     })
   );
-
-  deletePage(page);
-  createPage({ ...page, context: { screenshots } });
 };

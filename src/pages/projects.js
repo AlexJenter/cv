@@ -33,8 +33,7 @@ class ProjectsPage extends React.Component {
 
   showScreenshot(url) {
     const { displayUrl } = this.state;
-    const { screenshots } = this.props.pathContext;
-    if (!screenshots[url] || url === displayUrl) return;
+    if (!this.screenshots[url] || url === displayUrl) return;
     clearTimeout(this.fadeTimer);
     this.setState({ displayUrl: url, prevUrl: displayUrl });
     this.fadeTimer = setTimeout(
@@ -80,9 +79,12 @@ class ProjectsPage extends React.Component {
   }
 
   render() {
-    const { data, pathContext } = this.props;
-    const { screenshots } = pathContext;
+    const { data } = this.props;
     const { displayUrl, prevUrl, tooltipPos } = this.state;
+    this.screenshots = data.screenshots.edges.reduce((acc, { node }) => {
+      if (node.screenshotUrl) acc[node.projectUrl] = node.screenshotUrl;
+      return acc;
+    }, {});
 
     return (
       <article onMouseMove={this.handleMouseMove}>
@@ -138,7 +140,7 @@ class ProjectsPage extends React.Component {
             {prevUrl && (
               <img
                 key={prevUrl}
-                src={screenshots[prevUrl]}
+                src={this.screenshots[prevUrl]}
                 className="preview-tooltip__layer preview-tooltip__layer--out"
                 alt=""
               />
@@ -146,7 +148,7 @@ class ProjectsPage extends React.Component {
             {displayUrl && (
               <img
                 key={displayUrl}
-                src={screenshots[displayUrl]}
+                src={this.screenshots[displayUrl]}
                 className="preview-tooltip__layer preview-tooltip__layer--in"
                 alt=""
               />
@@ -175,6 +177,14 @@ export const query = graphql`
             }
           }
           html
+        }
+      }
+    }
+    screenshots: allProjectScreenshot {
+      edges {
+        node {
+          projectUrl
+          screenshotUrl
         }
       }
     }
