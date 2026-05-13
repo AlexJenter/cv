@@ -99,7 +99,7 @@ class ProjectsPage extends React.Component {
           ))}
         </header>
 
-        <main>
+        <main className="recent">
           <h2>Recent Projects</h2>
           <ul>
             {links.web.map(({ url, label }) => (
@@ -109,22 +109,33 @@ class ProjectsPage extends React.Component {
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onMouseEnter={ENABLE_PREVIEWS ? e => {
-                    const x = e.clientX + 20;
-                    const y = e.clientY + 20;
-                    this.targetPos = { x, y };
-                    this.easedPos = { x, y };
-                    this.setState({ hoveredUrl: url, tooltipPos: { x, y } });
-                    this.showScreenshot(url);
-                  } : null}
-                  onMouseLeave={ENABLE_PREVIEWS ? () => {
-                    if (this.rafId) {
-                      cancelAnimationFrame(this.rafId);
-                      this.rafId = null;
-                    }
-                    this.setState({ hoveredUrl: null });
-                    this.hideScreenshot();
-                  } : null}
+                  onMouseEnter={
+                    ENABLE_PREVIEWS
+                      ? e => {
+                          const x = e.clientX + 20;
+                          const y = e.clientY + 20;
+                          this.targetPos = { x, y };
+                          this.easedPos = { x, y };
+                          this.setState({
+                            hoveredUrl: url,
+                            tooltipPos: { x, y }
+                          });
+                          this.showScreenshot(url);
+                        }
+                      : null
+                  }
+                  onMouseLeave={
+                    ENABLE_PREVIEWS
+                      ? () => {
+                          if (this.rafId) {
+                            cancelAnimationFrame(this.rafId);
+                            this.rafId = null;
+                          }
+                          this.setState({ hoveredUrl: null });
+                          this.hideScreenshot();
+                        }
+                      : null
+                  }
                 >
                   {label}
                 </a>
@@ -140,22 +151,75 @@ class ProjectsPage extends React.Component {
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onMouseEnter={ENABLE_PREVIEWS ? e => {
-                    const x = e.clientX + 20;
-                    const y = e.clientY + 20;
-                    this.targetPos = { x, y };
-                    this.easedPos = { x, y };
-                    this.setState({ hoveredUrl: url, tooltipPos: { x, y } });
-                    this.showScreenshot(url);
-                  } : null}
-                  onMouseLeave={ENABLE_PREVIEWS ? () => {
-                    if (this.rafId) {
-                      cancelAnimationFrame(this.rafId);
-                      this.rafId = null;
-                    }
-                    this.setState({ hoveredUrl: null });
-                    this.hideScreenshot();
-                  } : null}
+                  onMouseEnter={
+                    ENABLE_PREVIEWS
+                      ? e => {
+                          const x = e.clientX + 20;
+                          const y = e.clientY + 20;
+                          this.targetPos = { x, y };
+                          this.easedPos = { x, y };
+                          this.setState({
+                            hoveredUrl: url,
+                            tooltipPos: { x, y }
+                          });
+                          this.showScreenshot(url);
+                        }
+                      : null
+                  }
+                  onMouseLeave={
+                    ENABLE_PREVIEWS
+                      ? () => {
+                          if (this.rafId) {
+                            cancelAnimationFrame(this.rafId);
+                            this.rafId = null;
+                          }
+                          this.setState({ hoveredUrl: null });
+                          this.hideScreenshot();
+                        }
+                      : null
+                  }
+                >
+                  {label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <h2>Teaching</h2>
+          <ul>
+            {links.teaching.map(({ url, label }) => (
+              <li key={url} className="recent-work-item">
+                <a
+                  className="recent-work-link"
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onMouseEnter={
+                    ENABLE_PREVIEWS
+                      ? e => {
+                          const x = e.clientX + 20;
+                          const y = e.clientY + 20;
+                          this.targetPos = { x, y };
+                          this.easedPos = { x, y };
+                          this.setState({
+                            hoveredUrl: url,
+                            tooltipPos: { x, y }
+                          });
+                          this.showScreenshot(url);
+                        }
+                      : null
+                  }
+                  onMouseLeave={
+                    ENABLE_PREVIEWS
+                      ? () => {
+                          if (this.rafId) {
+                            cancelAnimationFrame(this.rafId);
+                            this.rafId = null;
+                          }
+                          this.setState({ hoveredUrl: null });
+                          this.hideScreenshot();
+                        }
+                      : null
+                  }
                 >
                   {label}
                 </a>

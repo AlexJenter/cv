@@ -26,18 +26,12 @@ module.exports = {
     {
       url: "http://www.kunstbetrieb.ch/en/maitha-abdalla-2023/",
       label: "The Dancer’s Skin, Maitha Abdalla"
-    },
+    }
+  ],
+  teaching: [
     {
-      url: "http://www.kunstbetrieb.ch/en/claudia-julia-muller-2021-2/",
-      label: "L`aïsous le toit, Claudia & Julia Müller"
+      url: "https://github.com/logrinto/IAD2017.projektwoche.kontext",
+      label: "SfGZ IAD2017 – Kontext "
     }
   ]
 };
-
-// 3d
-// maitha abdalla http://www.kunstbetrieb.ch/en/maitha-abdalla-2023/
-// claudia und julia müller http://www.kunstbetrieb.ch/en/claudia-julia-muller-2021-2/
-// vanessa billy http://www.kunstbetrieb.ch/en/vanessa-billy-2021/
-
-// Teaching
-// https://github.com/logrinto/IAD2017.projektwoche.kontext
