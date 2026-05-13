@@ -8,8 +8,6 @@ links:
       text: "Github"
     - href: "https://www.linkedin.com/in/jenteralex/"
       text: "LinkedIn" 
-    - href: "/projects"
-      text: "Recent Projects" 
 published: false
 ---
 

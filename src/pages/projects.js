@@ -32,7 +32,7 @@ const ProjectsPage = ({ data }) => (
       </h1>
       <img className="portrait" src={image} alt="portrait of alex jenter" />
       {data.person.edges.map(x => (
-        <FirstSection key={x.node.id} {...x.node} />
+        <FirstSection key={x.node.id} {...x.node} page="projects" />
       ))}
     </header>
 

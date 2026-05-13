@@ -1,16 +1,17 @@
-import React from 'react'
+import React from "react";
+import Link from "gatsby-link";
 
 export default class Firstsection extends React.Component {
   constructor() {
-    super()
+    super();
     this.state = {
-      renderLinks: false,
-    }
+      renderLinks: false
+    };
   }
   componentDidMount() {
     this.setState({
-      renderLinks: true,
-    })
+      renderLinks: true
+    });
   }
   render() {
     return (
@@ -28,7 +29,9 @@ export default class Firstsection extends React.Component {
             </a>
           ) : null
         )}
+        {this.props.page === "cv" && <Link to="/projects/">Recent Projects</Link>}
+        {this.props.page === "projects" && <Link to="/">CV</Link>}
       </section>
-    )
+    );
   }
 }
