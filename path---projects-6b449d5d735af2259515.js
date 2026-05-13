@@ -1,0 +1,2 @@
+webpackJsonp([97786326051841],{324:function(e,t){e.exports={data:{person:{edges:[{node:{id:"/Users/alex/Sites/cv/src/markdown/person.md absPath of file >>> MarkdownRemark",frontmatter:{position:200,title:"Person",links:[{href:"mailto:jenteralex@gmail.com?subject=Hey, nice CV!",text:"Email"},{href:"https://github.com/AlexJenter",text:"Github"},{href:"https://www.linkedin.com/in/jenteralex/",text:"LinkedIn"}]},html:"<p>Web developer with a background in design</p>"}}]}},pathContext:{}}}});
+//# sourceMappingURL=path---projects-6b449d5d735af2259515.js.map
