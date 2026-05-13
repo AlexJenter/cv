@@ -2,7 +2,10 @@ const fetch = require("node-fetch");
 const crypto = require("crypto");
 const links = require("./src/data/projects");
 
+const ENABLE_PREVIEWS = false;
+
 exports.sourceNodes = async ({ boundActionCreators }) => {
+  if (!ENABLE_PREVIEWS) return;
   const { createNode } = boundActionCreators;
 
   await Promise.all(

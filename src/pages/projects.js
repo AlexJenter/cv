@@ -6,6 +6,7 @@ import FirstSection from "../components/FirstSection";
 import image from "../../static/foto-av.jpg";
 import links from "../data/projects";
 
+const ENABLE_PREVIEWS = false;
 const LERP = 0.1;
 const FADE_MS = 250;
 
@@ -101,29 +102,60 @@ class ProjectsPage extends React.Component {
         <main>
           <h2>Recent Projects</h2>
           <ul>
-            {links.map(({ url, label }) => (
+            {links.web.map(({ url, label }) => (
               <li key={url} className="recent-work-item">
                 <a
                   className="recent-work-link"
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onMouseEnter={e => {
+                  onMouseEnter={ENABLE_PREVIEWS ? e => {
                     const x = e.clientX + 20;
                     const y = e.clientY + 20;
                     this.targetPos = { x, y };
                     this.easedPos = { x, y };
                     this.setState({ hoveredUrl: url, tooltipPos: { x, y } });
                     this.showScreenshot(url);
-                  }}
-                  onMouseLeave={() => {
+                  } : null}
+                  onMouseLeave={ENABLE_PREVIEWS ? () => {
                     if (this.rafId) {
                       cancelAnimationFrame(this.rafId);
                       this.rafId = null;
                     }
                     this.setState({ hoveredUrl: null });
                     this.hideScreenshot();
-                  }}
+                  } : null}
+                >
+                  {label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <h2>Objects / 3D</h2>
+          <ul>
+            {links.physical.map(({ url, label }) => (
+              <li key={url} className="recent-work-item">
+                <a
+                  className="recent-work-link"
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onMouseEnter={ENABLE_PREVIEWS ? e => {
+                    const x = e.clientX + 20;
+                    const y = e.clientY + 20;
+                    this.targetPos = { x, y };
+                    this.easedPos = { x, y };
+                    this.setState({ hoveredUrl: url, tooltipPos: { x, y } });
+                    this.showScreenshot(url);
+                  } : null}
+                  onMouseLeave={ENABLE_PREVIEWS ? () => {
+                    if (this.rafId) {
+                      cancelAnimationFrame(this.rafId);
+                      this.rafId = null;
+                    }
+                    this.setState({ hoveredUrl: null });
+                    this.hideScreenshot();
+                  } : null}
                 >
                   {label}
                 </a>
@@ -132,7 +164,7 @@ class ProjectsPage extends React.Component {
           </ul>
         </main>
 
-        {(displayUrl || prevUrl) && (
+        {ENABLE_PREVIEWS && (displayUrl || prevUrl) && (
           <div
             className="preview-tooltip"
             style={{ left: tooltipPos.x, top: tooltipPos.y }}
